@@ -1,0 +1,30 @@
+### Get Paginated bookings by filter startDate and endDate
+GET http://localhost:8080/bookings?startDate=2024-02-22&endDate=2024-02-26&page=0&size=5
+
+### Get Paginated results of all bookings
+GET http://localhost:8080/bookings/all
+
+### Create a new booking
+POST http://localhost:8080/booking
+Content-Type: application/json
+
+{
+  "startDate": "2023-01-01",
+  "endDate": "2023-03-01",
+  "contactDetails": {
+    "cellNumber": "082111123",
+    "workNumber": "0121230412",
+    "email": "testing@onetwo.com"
+  },
+  "personalDetails": {
+    "firstName": "Firstname",
+    "surname": "Surname"
+  }
+}
+
+### Delete a booking by ID
+DELETE http://localhost:8080/booking/2
+
+
+
+

@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  reservation-service:
+    container_name: reservation-service
+    image: reservation-service:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - ENV=local
